@@ -1,0 +1,46 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC and ETH Price Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Bitcoin (BTC) and Ethereum (ETH) Price Prediction</h1>
+        <div class="mt-4">
+            <h3>Input Features</h3>
+            <form id="prediction-form">
+                <div class="form-group">
+                    <label for="open">Open Price:</label>
+                    <input type="number" class="form-control" id="open" required>
+                </div>
+                <div class="form-group">
+                    <label for="high">High Price:</label>
+                    <input type="number" class="form-control" id="high" required>
+                </div>
+                <div class="form-group">
+                    <label for="low">Low Price:</label>
+                    <input type="number" class="form-control" id="low" required>
+                </div>
+                <div class="form-group">
+                    <label for="close">Close Price:</label>
+                    <input type="number" class="form-control" id="close" required>
+                </div>
+                <div class="form-group">
+                    <label for="volume">Volume:</label>
+                    <input type="number" class="form-control" id="volume" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Predict BTC Price</button>
+                <button type="button" class="btn btn-secondary" id="predict-eth">Predict ETH Price</button>
+            </form>
+        </div>
+        <div id="result" class="mt-4"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
