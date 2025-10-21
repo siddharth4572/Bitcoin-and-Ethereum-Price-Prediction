@@ -5,7 +5,6 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# Load the model
 model = joblib.load('btc_model.pkl')
 
 @app.route('/')
