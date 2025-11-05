@@ -12,6 +12,8 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 app = Flask(__name__,
             # Serve static files (CSS, JS) from the frontend folder
             static_folder=os.path.join(PROJECT_ROOT, 'frontend'),
+            # Serve them from the root URL path (e.g., /css/styles.css)
+            static_url_path='',
             # Serve the index.html from the frontend folder
             template_folder=os.path.join(PROJECT_ROOT, 'frontend'))
 
