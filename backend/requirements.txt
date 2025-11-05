@@ -1,7 +1,7 @@
 Flask
+gunicorn
 pandas
 numpy
 scikit-learn
 xgboost
-fbprophet
-yfinance
+joblib
