@@ -24,7 +24,11 @@ document.getElementById('prediction-form').addEventListener('submit', function(e
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('result').innerHTML = `Predicted BTC Price: $${data.prediction[0].toFixed(2)}`;
+        if (data.prediction) {
+            document.getElementById('result').innerHTML = `Predicted BTC Price: $${data.prediction[0].toFixed(2)}`;
+        } else {
+            document.getElementById('result').innerHTML = `Error: ${data.error}`;
+        }
     })
     .catch(error => {
         console.error('Error:', error);
@@ -56,7 +60,11 @@ document.getElementById('predict-eth').addEventListener('click', function() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('result').innerHTML += `<br>Predicted ETH Price: $${data.prediction[0].toFixed(2)}`;
+        if (data.prediction) {
+            document.getElementById('result').innerHTML += `<br>Predicted ETH Price: $${data.prediction[0].toFixed(2)}`;
+        } else {
+            document.getElementById('result').innerHTML += `<br>Error: ${data.error}`;
+        }
     })
     .catch(error => {
         console.error('Error:', error);
