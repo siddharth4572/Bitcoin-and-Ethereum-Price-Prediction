@@ -5,14 +5,12 @@ document.getElementById('prediction-form').addEventListener('submit', function(e
     const open = parseFloat(document.getElementById('open').value);
     const high = parseFloat(document.getElementById('high').value);
     const low = parseFloat(document.getElementById('low').value);
-    const close = parseFloat(document.getElementById('close').value);
     const volume = parseFloat(document.getElementById('volume').value);
 
     const data = [{
         Open: open,
         High: high,
         Low: low,
-        Close: close,
         Volume: volume
     }];
 
@@ -39,14 +37,12 @@ document.getElementById('predict-eth').addEventListener('click', function() {
     const open = parseFloat(document.getElementById('open').value);
     const high = parseFloat(document.getElementById('high').value);
     const low = parseFloat(document.getElementById('low').value);
-    const close = parseFloat(document.getElementById('close').value);
     const volume = parseFloat(document.getElementById('volume').value);
 
     const data = [{
         Open: open,
         High: high,
         Low: low,
-        Close: close,
         Volume: volume
     }];
 
